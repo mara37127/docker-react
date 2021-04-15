@@ -6,4 +6,4 @@ before_install:
   - docker build -t mamra/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run mamra/docker-react npm run test -- --coverage
+  - docker run  -e CI=true mamra/docker-react npm run test -- --coverage
